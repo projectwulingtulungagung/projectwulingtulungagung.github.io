@@ -1,0 +1,57 @@
+<!doctype html>
+<html amp lang="{{ site.lang }}">
+
+<head>
+    <title>{{ page.title }}</title>
+    {% include metadata.html %}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script custom-element="amp-sidebar" async src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async="async" custom-element="amp-carousel"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-selector-0.1.js" async="async" custom-element="amp-selector"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async="async" custom-element="amp-accordion"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js" async="async" custom-element="amp-lightbox"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async="async" custom-element="amp-bind"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async="async" custom-element="amp-list"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async="async" custom-template="amp-mustache"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <style amp-custom>﻿
+        {% include amp-style-home.html %}
+    </style>
+    {% include amp-boilerplate.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    <main class="home-page">
+        {% include slider.html %}
+        <div class="card card-panel">
+            <li class="card">
+                <a href="{{ page.url }}" title="{{ page.judul-komentar }}">
+                    <amp-img src="{{ page.image }}" width="640" height="640" alt="{{ page.judul-komentar }}" title="{{ page.judul-komentar }}" layout="responsive"></amp-img>
+                </a>
+                <div class="card-panel">
+                    <ul class="basic-listing-card user-reviews">
+                        <h1 class="heading">Tentang Kami</h1>
+                        <!-- breadcrumb Start -->
+                        <ul class="breadcrumb">
+                            <li><a href="/" title="Home">Home</a></li>
+                            <li class="active"><a href="/tentang-kami/" title="Tentang Kami">Tentang Kami</a></li>
+                        </ul>
+                        <!-- breadcrumb End -->
+                        <p class="text-heading gr-mrgn-t">
+                            Sekali lagi saya ucapkan selamat datang di <a href="/"><strong>Wuling Tulungagung</strong></a>.<br>Website ini adalah website pemasaran untuk menunjang sarana komunikasi Anda selaku konsumen dan calon konsumen Wuling dengan marketing executive Wuling terutama di wilayah Tulungagung.<br>Kami sangat berpengalaman melayani konsumen kami yang membeli mobil baru Wuling secara <strong>Cash</strong> maupun secara <strong>Kredit</strong>. <strong>”Customer Satisfaction is Our Goal“</strong> adalah motto penyemangat kami dalam melayani kebutuhan Anda. Kami selalu dan pasti memberikan pelayanan yang tulus dan bertanggung jawab serta mengutamakan kepercayaan (Trust) kepada semua konsumen kami dari proses kredit, delivery service ke rumah konsumen.<br>Selain hal tersebut diatas, dengan website ini diharapkan dapat membantu memberikan Informasi yang lengkap terkait informasi produk, harga, promo, diskon, & kredit dari produk Wuling sesuai Kebutuhan konsumen dan calon konsumen Wuling, serta dapat membantu dalam hal pemasaran produk Wuling di area Tulungagung, Karisidenan Kediri dan Jawa Timur.<br>Fasilitas lain yang kami tawarkan adalah Terima Tukar Tambah (Trade in),Proses Kredit Cepat, DP Atau ANGSURAN bisa disesuaikan dengan Budget/keinginan.<br>Layanan Terbaik, Kualitas Terbaik, Diskon Maksimal, Banyak Bonusnya, Respon Cepat, Bertanggung Jawab, Menguasai Produk Knowledge, Proses Kredit Mudah akan menjadi prioritas layanan Kami. <strong>Anda Sibuk? Kami Siap Datang dan Presentasi di tempat Anda.</strong> Segera hubungi kami untuk konsultasi lebih lanjut. Siap melayani 24 jam.<br>Terima Kasih Atas Kunjungan Anda di Wuling Tulungagung.<br><br>Salam Hormat,<br><br><br><strong>Andre Kurnia Akbar</strong><br>
+                            Marketing Executive Wuling Tulungagung</p>
+                        <span class="hint gr-mrgn-b"></span>
+                    </ul>
+                </div>
+            </li>
+        </div>
+    </main>
+    {% include nav.html %}
+    {% include footer.html %}
+    {% include serviceworker.html %}
+    {% include float-button.html %}
+</body>
+
+</html>

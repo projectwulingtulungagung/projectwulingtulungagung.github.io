@@ -1,0 +1,43 @@
+creator: dennyrwa
+lang: id
+locale: id_ID
+themecolor: ffffff
+company: Wuling Tulungagung
+siteurl: https://wulingtulungagung.web.id
+icon: /favicon.ico
+logo: /images/logo-wuling.svg
+alt-logo: Logo of Wuling Tulungagung
+twitter: dennyrwa
+facebook: https://www.facebook.com/Wuling-Tulungagung-119891929406181/
+instagram: https://www.instagram.com/wulingtla/
+youtube:
+copyright: © Copyright <strong>Wuling Tulungagung</strong>. <br>All Rights Reserved and All the trademarks are the property of their respective owners
+whatsapp-float-desktop: https://web.whatsapp.com/send?phone=6285107406331&text=Hallo, Andre Wuling Tulungagung
+whatsapp-float-phone: whatsapp://send?text=Hallo, Andre Wuling Tulungagung!&phone=+6285107406331
+exclude: [README.md]
+email: cs@wulingtulungagung.web.id
+streetAddress: Jl. Pahlawan nomor 9 Tulungagung
+postOfficeBoxNumber: 
+addressLocality: Tulungagung
+addressRegion: Jawa Timur
+postalCode: 66224
+addressCountry: Indonesia
+telephone: 6285107406331
+telephone-detail: 0851-0740-6331
+whatsapp-api: https://api.whatsapp.com/send?text=Hallo%20Andre%20Wuling%20Tulungagung%20(Nama)%20(Alamat)%20&phone=6285107406331
+fb_app_id: 449320139267791
+google-my-bussiness:
+permalink: pretty
+plugins:
+  - jekyll-feed
+collections:
+  data-slider:
+    output: true
+  data-preorder:
+    output: true
+  data-product:
+    output: true
+    permalink: /produk/:name/
+  data-client:
+    output: true
+    permalink: /testimoni/:name/

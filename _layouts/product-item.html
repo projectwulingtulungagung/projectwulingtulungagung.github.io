@@ -1,0 +1,129 @@
+<!doctype html>
+<html amp lang="{{ site.lang }}">
+
+<head>
+    <title>{{ page.title }}</title>
+    {% include metadata.html %}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script custom-element="amp-sidebar" async src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async="async" custom-element="amp-carousel"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-selector-0.1.js" async="async" custom-element="amp-selector"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async="async" custom-element="amp-accordion"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js" async="async" custom-element="amp-lightbox"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async="async" custom-element="amp-bind"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async="async" custom-element="amp-list"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async="async" custom-template="amp-mustache"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <style amp-custom>﻿
+        {% include amp-style-home.html %}
+    </style>
+    {% include amp-boilerplate.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    <main class="home-page">
+        {% include slider.html %}
+        <header class="card card-panel">
+            <h1>{{ page.jenis-mobil }}</h1>
+            <br>
+            <!-- breadcrumb Start -->
+            <ul class="breadcrumb">
+                <li><a href="/" title="Home">Home</a></li>
+                <li><a href="/produk/" title="Produk">Produk</a></li>
+                <li class="active"><a href="{{ page.url }}" title="{{ page.jenis-mobil }}">{{ page.jenis-mobil }}</a></li>
+            </ul>
+            <!-- breadcrumb End -->
+            <div class="read-more brand-content">
+                <div class="collapsed" [class]="brandContent[brandContent.currentState].style">
+                    <p class="info gr-mrgn-t">{{ page.jenis-mobil }} adalah Produk yang kami sediakan untuk memenuhi kebutuhan Anda, Update seputar PROMO, DISKON, PRODUK BARU dan HARGA TERBARU tentang {{ page.jenis-mobil }} hanya ada di sini, Halo Calon Konsumen dan Konsumen Wuling Tulungagung, disini Anda bisa mendapatkan infromasi perihal {{ page.jenis-mobil }}, dan apabila merasa infromasi yang Anda dapatkan kurang memenuhi keinginan Anda Silakan hubungi kami untuk memastikan kebutuhan Anda dapat kami penuhi. Dan caranya cukup mudah <a class="theme-link text-accent" href="{{ site.whatsapp-api }}" title="dealer resmi Wuling">Klik di sini untuk menghubungi via Whatsapp</a>, atau lihat pilihan narahubung lainnya di laman <a class="theme-link text-accent" href="/hubungi-kami/" title="Hubungi Kami">Hubungi Kami</a>.</p>
+                </div>
+            </div>
+            <button on="tap:AMP.setState({brandContent : {currentState: (brandContent.currentState == 'Tutup' ? 'Baca Selengkapnya' : 'Tutup')}})" [text]=" brandContent.currentState">Baca Selengkapnya</button>
+        </header>
+    </main>
+    <main class="listing-page">
+        <amp-state id="brandContent">
+            <script type="application/json">
+            {
+                "currentState": "Baca Selengkapnya",
+                "Hide": {
+                    "style": "expanded"
+                },
+                "Baca Selengkapnya": {
+                    "style": "collapsed"
+                }
+            }
+            </script>
+        </amp-state>
+        <ul class="listing basic-listing-card">
+            <div id="w0" class="list-view">
+                <div data-key="0">
+                    <li class="card">
+                        <div>
+                            <amp-carousel lightbox width="3" height="2" layout="responsive" type="slides" autoplay delay="2000">
+                                <figure>
+                                    <amp-img src="{{ page.image }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image2 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption2 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image3 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption3 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image4 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption4 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image5 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption5 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image6 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption6 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image7 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption7 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image8 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption8 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image9 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption9 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                                <figure>
+                                    <amp-img src="{{ page.image10 }}" width="3" height="2" alt="{{ page.jenis-mobil }}" title="{{ page.jenis-mobil }}" layout="responsive"></amp-img>
+                                    <figcaption>{{ page.figcaption10 }} {{ page.jenis-mobil }}</figcaption>
+                                </figure>
+                            </amp-carousel>
+                        </div>
+                        <div class="card-panel">
+                            <a href="{{ page.url }}" title="{{ page.jenis-mobil }}" class="card-title">
+                                {{ page.jenis-mobil }}</a>
+                            <span class="card-panel-price height43">
+                                {{ page.range-harga }} <span class="hint">Harga OTR</span>
+                            </span>
+                            <a class="card-link" href="{{ page.url }}" title="Harga {{ page.jenis-mobil }}">Detail Harga {{ page.jenis-mobil }}</a>
+                            {{ page }}
+                        </div>
+                    </li>
+                </div>
+            </div>
+            {% include client-review.html %}
+    </main>
+    {% include nav.html %}
+    {% include footer.html %}
+    {% include serviceworker.html %}
+    {% include float-button.html %}
+</body>
+
+</html>

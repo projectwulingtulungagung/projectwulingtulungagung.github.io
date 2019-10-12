@@ -1,0 +1,139 @@
+<!doctype html>
+<html amp lang="{{ page.language }}">
+
+<head>
+    <title>{{ page.title }}</title>
+    {% include metadata.html %}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script custom-element="amp-sidebar" async src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <!-- <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> -->
+    <!-- <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script> -->
+    <!-- <script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script> -->
+    <!-- <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script> -->
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async="async" custom-element="amp-carousel"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-selector-0.1.js" async="async" custom-element="amp-selector"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async="async" custom-element="amp-accordion"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js" async="async" custom-element="amp-lightbox"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async="async" custom-element="amp-bind"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async="async" custom-element="amp-list"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async="async" custom-template="amp-mustache"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <style amp-custom>﻿
+        {% include amp-style-home.html %}
+    </style>
+    {% include amp-boilerplate.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    <main class="home-page">
+        {% include slider.html %}
+        <div class="card card-panel">
+            <li class="card">
+                <a href="/produk/" title="{{ site.company }}">
+                    <amp-img src="/images/dealer-wuling-tulungagung.jpg" width="272" height="181" alt="{{ site.company }}" title="{{ site.company }}" layout="responsive"></amp-img>
+                </a>
+                <div class="card-panel">
+                    <h1 class="card-title">Wuling Tulungagung</h1>
+                    <p class="info">Selamat datang di Dealer resmi Wuling Tulungagung. Dapatkan informasi lengkap tentang Harga Terbaru, Promo, Diskon dan Simulasi Kredit dari berbagai macam produk unggulan yang kami sediakan kepada konsumen dan calon konsumen Wuling Tulungagung</p>
+                </div>
+            </li>
+        </div>
+    </main>
+    <section class="card home-nav">
+        <h2>Cari Mobil di Wuling Tulungagung</h2>
+        <ul class="grid-3 clearfix car">
+            <li class="car">
+                <a href="/produk/" role="button" tabindex="0" id="new-mobil" on="tap:new-mobil-modal" title="Pilih Unit" class="card-icon"><i class="icon-new"></i><span class="truncate block">Pilih Unit</span></a>
+            </li>
+            <li>
+                <a href="tel:{{ site.telephone }}" role="button" tabindex="0" id="used-car" title="Hubungi Kami" class="card-icon"><i class="icon-phone"></i>Hubungi Kami </a>
+            </li>
+            <li>
+                <a href="https://api.whatsapp.com/send?text=Hallo%20Andre%20Wuling%20Tulungagung%20Tanya%20PROMO%20Mobil%20Wuling%0ANama%20%3A%0AAlamat%20%3A&phone=6285107406331" role="button" tabindex="0" id="offer" class="card-icon"><i class="icon-calculator"></i>Tanya Promo</a>
+            </li>
+            <li>
+                <a role="button" tabindex="0" id="finance" title="Transaksi" class="card-icon open-model">
+                    <i class="icon-finance"></i>
+                    Transaksi </a>
+            </li>
+            <li class="truk">
+                <a role="button" tabindex="0" id="new-truk" title="Serah Terima" class="card-icon">
+                    <i class="icon-new"></i>
+                    <span class="truncate block">Serah Terima</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/dialog/share?app_id={{ site.fb_app_id }}&display=popup&href={{ site.url }}{{ page.url }}" role="button" tabindex="0" id="news" class="card-icon" title="Update">
+                    <i class="icon-facebook"></i>
+                    Update </a>
+            </li>
+        </ul>
+    </section>
+    <main class="listing-page">
+        <amp-state id="brandContent">
+            <script type="application/json">
+            {
+                "currentState": "Baca Selengkapnya",
+                "Hide": {
+                    "style": "expanded"
+                },
+                "Baca Selengkapnya": {
+                    "style": "collapsed"
+                }
+            }
+            </script>
+        </amp-state>
+        <header class="card card-panel">
+            <h2>Dealer Wuling Tulungagung</h2>
+            <span class="rating gr-pad-t">
+                <i class="ic-star-filled"></i><i class="ic-star-filled"></i><i class="ic-star-filled"></i><i class="ic-star-filled"></i><i class="ic-star-half"></i> <span class="hint">
+                    Rating dari konsumen berdasarkan 121 ulasan </span>
+            </span>
+            <div class="read-more brand-content">
+                <div class="collapsed" [class]="brandContent[brandContent.currentState].style">
+                    <p class="info gr-mrgn-t">
+                        Terimakasih telah memberikan rating tinggi terhadap pelayanan kami dan sekarang sudah saatnya giliran Anda untuk yang belum memperoleh layanan prima dari kami. Saat ini tersedia 4 model mobil Wuling yang siap untuk Anda gunakan. Hubungi kami untuk memastikan kesediaan pilihan Anda. <a class="theme-link text-accent" href="{{ site.whatsapp-api }}" title="Whatsapp {{ site.company }}">Klik di sini untuk menghubungi via Whatsapp</a>, atau lihat pilihan narahubung lainnya di laman <a class="theme-link text-accent" href="/hubungi-kami/" title="Hubungi Kami">Hubungi Kami</a>.</p>
+                    <div class="gr-listview margin-small-t">
+                        <amp-accordion>
+                            <section>
+                                <h2>Harga Mobil Wuling</h2>
+                                <table class="price-table table-border">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <strong>Model</strong>
+                                            </th>
+                                            <th>
+                                                <strong>Harga</strong>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="gsc_thin_scroll">
+                                        {% for item in site.data-product %}
+                                        <tr>
+                                            <td>{{ item.jenis-mobil }}</td>
+                                            <td>{{ item.range-harga }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </section>
+                        </amp-accordion>
+                    </div>
+                </div>
+            </div>
+            <button on="tap:AMP.setState({brandContent : {currentState: (brandContent.currentState == 'Tutup' ? 'Baca Selengkapnya' : 'Tutup')}})" [text]=" brandContent.currentState">Baca Selengkapnya</button>
+            <span class="hint">4 Jenis Mobil Wuling di Indonesia</span>
+        </header>
+        {% include jenis-mobil.html %}
+        {% include client-review.html %}
+    </main>
+    {% include nav.html %}
+    {% include footer.html %}
+    {% include serviceworker.html %}
+    {% include float-button.html %}
+</body>
+
+</html>

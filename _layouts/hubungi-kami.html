@@ -1,0 +1,102 @@
+<!doctype html>
+<html amp lang="{{ site.lang }}">
+
+<head>
+    <title>{{ page.title }}</title>
+    {% include metadata.html %}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script custom-element="amp-sidebar" async src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async="async" custom-element="amp-carousel"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-selector-0.1.js" async="async" custom-element="amp-selector"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async="async" custom-element="amp-accordion"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js" async="async" custom-element="amp-lightbox"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async="async" custom-element="amp-bind"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async="async" custom-element="amp-list"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async="async" custom-template="amp-mustache"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <style amp-custom>﻿
+        {% include amp-style-home.html %}
+    </style>
+    {% include amp-boilerplate.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    <main class="home-page">
+        {% include slider.html %}
+        <div class="card card-panel">
+            <li class="card">
+                <a href="{{ page.url }}" title="{{ page.title }}">
+                    <amp-img src="{{ page.image }}" width="3" height="2" alt="{{ page.title }}" title="{{ page.title }}" layout="responsive"></amp-img>
+                </a>
+                <div class="card-panel">
+                    <main class="footer-pages card-wrapper">
+                        <h1>Hubungi Kami</h1>
+                        <section class="card card-panel">
+                            <!-- breadcrumb Start -->
+                            <ul class="breadcrumb">
+                                <li><a href="/" title="Home">Home</a></li>
+                                <li class="active"><a href="/hubungi-kami/" title="Hubungi Kami">Hubungi Kami</a></li>
+                            </ul>
+                            <!-- breadcrumb End -->
+                            <br>
+                            <h2>{{ site.company }}</h2>
+                            <address>
+                                <span class="title"><i class="icon-location-fill"></i> <strong>Alamat Dealer :</strong></span><br>
+                                {{ site.streetAddress }}, {{ site.addressLocality }}, {{ site.addressRegion }}, {{ site.postalCode }}, {{ site.addressCountry }}
+                                <div class="gr-pad-t">
+                                    <a href="mailto:{{ site.email }}" title="{{ site.email }}"><span class="icon-envelop"></span><strong> Email :</strong><br>
+                                        {{ site.email }}</a>
+                                </div>
+                                <div class="gr-pad-t">
+                                    <a href="tel:{{ site.telephone }}" title="{{ site.email }}"><span class="icon-phone"></span>
+                                        <strong> Telepon :</strong><br>
+                                        {{ site.telephone-detail }}</a>
+                                </div>
+                                <div class="gr-pad-t">
+                                    <a href="sms:{{ site.telephone }}" title="{{ site.email }}"><span class="icon-bubbles"></span><strong> SMS :</strong><br>
+                                        {{ site.telephone-detail }}</a>
+                                </div>
+                                <div class="gr-pad-t">
+                                    <a href="{{ site.whatsapp-api }}" title="{{ site.email }}"><span class="icon-whatsapp"></span><strong> Whatsapp :</strong><br>
+                                        {{ site.telephone-detail }}</a>
+                                </div>
+                                <br>
+                                <div class="gr-pad-t">
+                                    <div class="float-left">
+                                        &nbsp; &nbsp; &nbsp;
+                                        <a href="{{ site.youtube }}" title="Youtube {{ site.company }}">
+                                            <span class="icon-youtube"></span>
+                                        </a> &nbsp; &nbsp; &nbsp;
+                                        <a href="{{ site.facebook }}" title="Facebook {{ site.company }}">
+                                            <span class="icon-facebook"></span>
+                                        </a> &nbsp; &nbsp; &nbsp;
+                                        <a href="{{ site.instagram }}" title="Instagram {{ site.company }}">
+                                            <span class="icon-instagram"></span>
+                                        </a> &nbsp; &nbsp; &nbsp;
+                                        <a href="{{ site.twitter }}" title="Twitter {{ site.company }}">
+                                            <span class="icon-twitter"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <br>
+                            </address>
+                        </section>
+                        <br>
+                        <section>
+                            <iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=wuling%20tulungagung&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </section>
+                    </main>
+                </div>
+            </li>
+        </div>
+    </main>
+    {% include nav.html %}
+    {% include footer.html %}
+    {% include serviceworker.html %}
+    {% include float-button.html %}
+</body>
+
+</html>

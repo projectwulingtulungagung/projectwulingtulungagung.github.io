@@ -1,0 +1,61 @@
+<!doctype html>
+<html amp lang="{{ site.lang }}">
+
+<head>
+    <title>{{ page.title }}</title>
+    {% include metadata.html %}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script custom-element="amp-sidebar" async src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async="async" custom-element="amp-carousel"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-selector-0.1.js" async="async" custom-element="amp-selector"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async="async" custom-element="amp-accordion"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js" async="async" custom-element="amp-lightbox"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async="async" custom-element="amp-bind"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-list-0.1.js" async="async" custom-element="amp-list"></script>
+    <script src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" async="async" custom-template="amp-mustache"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <style amp-custom>﻿
+        {% include amp-style-home.html %}
+    </style>
+    {% include amp-boilerplate.html %}
+</head>
+
+<body>
+    {% include header.html %}
+    <main class="home-page">
+        {% include slider.html %}
+        <div class="card card-panel">
+            <li class="card">
+                <a href="{{ page.url }}" title="{{ page.judul-komentar }}">
+                    <amp-img src="{{ page.image }}" width="3" height="2" alt="{{ page.judul-komentar }}" title="{{ page.judul-komentar }}" layout="responsive"></amp-img>
+                </a>
+                <div class="card-panel">
+                    <ul class="basic-listing-card user-reviews">
+                        <h1 class="heading">{{ page.judul-post }}</h1>
+                        <!-- breadcrumb Start -->
+                        <ul class="breadcrumb">
+                            <li><a href="/" title="Home">Home</a></li>
+                            <li><a href="/blog/" title="Testimoni">Blog</a></li><br>
+                            <li class="active" title="{{ page.title }}">{{ page.title }}</li>
+                        </ul>
+                        <!-- breadcrumb End -->
+                        <span class="rating-small">{{ page.kolom }}</span><span class="gr-mrgn-l">Ditulis oleh : {{ page.nama-penulis }}</span><span class="hint gr-mrgn-b">{{ page.tanggal-terbit }}</span>
+                        <p class="info line-clamp">{{ page.berita }}</p>
+                        <div class="info line-clamp">
+                            {{ content }}
+                        </div>
+                        <p class="text-heading gr-mrgn-t"></p>
+                        <span class="hint gr-mrgn-b"></span>
+                    </ul>
+                </div>
+            </li>
+        </div>
+    </main>
+    {% include nav.html %}
+    {% include footer.html %}
+    {% include serviceworker.html %}
+    {% include float-button.html %}
+</body>
+
+</html>
