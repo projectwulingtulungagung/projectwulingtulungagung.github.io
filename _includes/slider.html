@@ -1,0 +1,10 @@
+<header class="top-image car">
+    <amp-carousel layout="responsive" width="360" height="199" type="slides" autoplay delay="2000" lightbox>
+        {% for item in site.data-slider %}
+        <li>
+            <amp-img src="{{ item.amp-img }}" width="{{ item.width }}" height="{{ item.height }}" alt="{{ item.alt }}" layout="responsive">
+            </amp-img>
+        </li>
+        {% endfor %}
+    </amp-carousel>
+</header>

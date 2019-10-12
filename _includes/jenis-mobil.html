@@ -1,0 +1,87 @@
+<ul class="listing basic-listing-card">
+    <div id="w0" class="list-view">
+        {% for item in site.data-product %}
+        <div data-key="0">
+            <li class="card">
+                <a href="{{ item.url }}" title="{{ item.jenis-mobil }}">
+                    <amp-img src="{{ item.image }}" width="3" height="2" alt="{{ item.jenis-mobil }}" title="{{ item.jenis-mobil }}" layout="responsive"></amp-img>
+                </a>
+                <div class="card-panel">
+                    <a href="{{ item.url }}" title="{{ item.jenis-mobil }}" class="card-title">
+                        {{ item.jenis-mobil }}</a>
+                    <span class="card-panel-price height43">
+                        {{ item.range-harga }} <span class="hint">Harga OTR</span>
+                    </span>
+                    <a class="card-link" href="{{ item.url }}" title="Harga {{ item.jenis-mobil }}">Detail Harga {{ item.jenis-mobil }}</a>
+                </div>
+            </li>
+        </div>
+        {% endfor %}
+    </div>
+    <!--Popular Car Section HTML Start-->
+    <li class="card cr-popular cr-upcoming">
+        <h2>Segera Hadir Mobil Wuling</h2>
+        <ul>
+            <amp-carousel height="404" type="carousel" controls>
+                {% for item in site.data-preorder %}
+                <li class="card">
+                    <a title="{{ item.jenis-mobil }}">
+                        <amp-img src="{{ item.image }}" width="3" height="2" alt="{{ item.jenis-mobil }}" title="{{ item.jenis-mobil }}" layout="responsive"></amp-img>
+                    </a>
+                    <div class="card-panel">
+                        <a title="{{ item.jenis-mobil }}" class="card-title">{{ item.jenis-mobil }}</a>
+                        <span class="card-panel-price height43">
+                            Harga menyusul
+                        </span>
+                        <div class="ex-date gr-mrgn-t">
+                            <span class="ex-label">Perkiraan Tanggal Peluncuran</span>&nbsp;<b>{{ item.tanggal-peluncuran }}</b>
+                        </div>
+                        <a class='card-link text-accent2' title='Kabari Saya Saat Diluncurkan' href='https://api.whatsapp.com/send?text=Hallo%20Andre%20Wuling%20Tulungagung%20Kabari Saya%20Saat%20Diluncurkan%20{{ item.jenis-mobil }}%0ANama%20%3A%0AAlamat%20%3A&phone=6285107406331'>Kabari Saya Saat Diluncurkan</a>
+                    </div>
+                </li>
+                {% endfor %}
+            </amp-carousel>
+        </ul>
+        <a href='https://api.whatsapp.com/send?text=Hallo%20Andre%20Wuling%20Tulungagung%20Kabari Saya%20Saat%20Diluncurkan%20Mobil%20Baru%0ANama%20%3A%0AAlamat%20%3A&phone=6285107406331' class="cta-arrow" title="Kabari Waktu Peluncuran">Kabari Waktu Peluncuran</a>
+    </li>
+    <!--Popular Car Section HTML end-->
+    <!--Popular Car Section HTML Start-->
+    <li class="card cr-popular ">
+        <h2>Berita Terbaru Mobil Wuling</h2>
+        <ul>
+            <amp-carousel height="345" type="carousel" controls>
+                {% for post in site.posts %}
+                <li class="card">
+                    <a href="{{ post.url }}">
+                            <amp-img src="{{ post.image }}" width="3" height="2" alt="{{ post.judul-komentar }}" title="{{ post.judul-komentar }}" layout="responsive"></amp-img>
+                        </a>
+                        <div class="card-panel">
+                            <ul class="basic-listing-card user-reviews">
+                                <a class="heading" href="{{ post.url }}">{{ post.judul-post }}</a>
+                                <span class="rating-small">{{ post.kolom }}</span>
+                                <span class="gr-mrgn-l">{{ post.tanggal-terbit }}</span>
+                                <p class="text-heading gr-mrgn-t"></p>
+                                <span class="hint gr-mrgn-b"></span>
+                            </ul>
+                        </div>
+                </li>
+                {% endfor %}
+            </amp-carousel>
+        </ul>
+        <a class="cta-arrow" href="/blog/" title="Lihat Semua Berita Terbaru">Lihat Semua Berita Terbaru</a>
+    </li>
+    <!--Popular Car Section HTML end-->
+    <amp-state id="brandsIcon">
+        <script type="application/json">
+        {
+            "currentState": "more",
+            "less": {
+                "style": "expanded"
+            },
+            "more": {
+                "style": "collapsed"
+            }
+        }
+        </script>
+    </amp-state>
+</ul>
