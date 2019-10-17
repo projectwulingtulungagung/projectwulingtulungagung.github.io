@@ -4,6 +4,7 @@ layout: product-item
 kolom: PROMO
 tanggal-promo: 9 Okt, 2019
 data-key: 1
+title: Harga Wuling Confero di Tulungagung, Trenggalek, Blitar, Wlingi, Kediri, Pare dan Nganjuk
 jenis-mobil: Wuling Confero
 description: Wuling Confero adalah Produk yang kami sediakan untuk memenuhi kebutuhan Anda, Update PROMO, DISKON, PRODUK BARU dan HARGA TERBARU tentang Wuling Confero di sini.
 keyword: Wuling Confero, Wuling Tulungagung, kredit mobil wuling dp murah, kredit dp murah wuling, mobil wulling, harga kredit wuling, wuling harga kredit, harga mobil baru wuling, wu ling confero, harga baru wuling, harga terbaru wuling, berapa harga wuling confero, harga wuling confero terbaru, bengkel resmi wuling
