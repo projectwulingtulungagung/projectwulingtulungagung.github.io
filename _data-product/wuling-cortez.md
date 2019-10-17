@@ -4,6 +4,7 @@ layout: product-item
 kolom: PROMO
 tanggal-promo: 9 Okt, 2019
 data-key: 2
+title: Harga Wuling Cortez di Tulungagung, Trenggalek, Blitar, Wlingi, Kediri, Pare dan Nganjuk
 jenis-mobil: Wuling Cortez
 description: Wuling Cortez adalah Produk yang kami sediakan untuk memenuhi kebutuhan Anda, Update PROMO, DISKON, PRODUK BARU dan HARGA TERBARU tentang Wuling Cortez di sini.
 keyword: Wuling Cortez, Wuling Tulungagung, kredit mobil wuling dp murah, kredit dp murah wuling, mobil wulling, harga kredit wuling, wuling harga kredit, harga mobil baru wuling, wu ling confero, harga baru wuling, harga terbaru wuling, berapa harga wuling confero, harga wuling confero terbaru, bengkel resmi wuling
